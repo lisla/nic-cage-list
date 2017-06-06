@@ -1,19 +1,32 @@
-h1{
-  font-family: 'Arial';
+h1, h3{
+  font-family: 'Comic Sans MS';
   font-style: italic;
   margin: 10px auto;
   text-align: center;
 }
+
 label, p{
   font-family: 'Helvetica';
 }
 
 ul{
   list-style: none;
+  width: 220%;
 }
 
 li{
-  padding: 20px;
+  padding: 5px 20px;
+  font-size: 30px;
+  font-family: 'Comic Sans MS';
+  border-radius: 3px;
+  border: 1px solid black;
+  background-color: white;
+  opacity: 0.4;
+}
+
+li>button{
+  float: right;
+  margin: 2px 20px;
 }
 
 .background-div{
@@ -22,6 +35,7 @@ li{
   height: 100%;
   margin: 0px auto;
   display: block;
+  padding: 10px;
 }
 
 .background-div img{
@@ -33,7 +47,7 @@ li{
 }
 
 input{
-  margin: 50px;
+  margin: auto auto;
 }
 
 body {
