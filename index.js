@@ -15,15 +15,14 @@ function handleSubmit(ev){
 function promoteItem(ev){
     const b = ev.target
     b.textContent = 'Demote'
-    b.addEventListener('click', demoteItem)
+    b.onclick = demoteItem
     b.parentElement.style.backgroundColor = 'gold'
 }
 
 function demoteItem(ev){
     const b = ev.target
     b.textContent = 'Promote'
-    b.addEventListener('click', promoteItem)
-    b.removeEventListener('click', demoteItem)
+    b.onclick = promoteItem
     b.parentElement.style.backgroundColor = 'white'
 }
 
@@ -42,17 +41,17 @@ function renderListItem(value){
     const b2 =document.createElement('button')
     b2.textContent = 'Delete'
     li.appendChild(b2)
-    b1.addEventListener('click', promoteItem)
-    b2.addEventListener('click', deleteItem)
+    b1.onclick = promoteItem
+    b2.onclick = deleteItem
     return li
 }
 
 cageForm.addEventListener('submit', handleSubmit)
 
 for(var i = 0; i < promoteButtons.length; i++){
-    promoteButtons[i].addEventListener('click', promoteItem)
+    promoteButtons[i].onclick = promoteItem
 }
 
 for(var i = 0; i < deleteButtons.length; i++){
-    deleteButtons[i].addEventListener('click', deleteItem)
+    deleteButtons[i].onclick = deleteItem
 }
